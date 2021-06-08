@@ -7,12 +7,14 @@ class Polygon{
       return this.array.length;
     }
     get perimeter(){
-      let sum=0;
-      for(let i=0 ; i<=this.countsides;i++)
-      {
-      sum +=this.array[i]
-      }
-      return sum;
+      // let sum=0;
+      // for(let i=0 ; i<=this.countsides;i++)
+      // {
+      // sum +=this.array[i]
+      // }
+      // return sum;
+      const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      return this.array.reduce(reducer, 0);
 
     }
 }
