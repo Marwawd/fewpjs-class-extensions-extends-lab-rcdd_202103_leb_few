@@ -16,11 +16,11 @@ class Triangle extends Polygon {
   // inherits constructor
   get isValid(){
 
-    if(this.array[0]+this.array[1]>this.array[2]) return true;
-    else if(this.array[0]+this.array[2]>this.array[1]) return true;
-    else if(this.array[1]+this.array[2]>this.array[0]) return true;
-    else return false ;
-
+  return ((this.array[0]+this.array[1]>this.array[2]) &&
+    (this.array[0]+this.array[2]>this.array[1])&&
+    (this.array[1]+this.array[2]>this.array[0]) 
+  
+)
   }
 }
 
@@ -28,5 +28,7 @@ class Square extends Polygon {
   get area(){
     return this.array[0]*this.array[0]
   }
-
+get isValid(){
+  
+}
 }
