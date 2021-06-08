@@ -25,7 +25,7 @@ class Triangle extends Polygon {
 }
 
 class Square extends Polygon {
-  area(){
+  get area(){
     return this.array[0]*this.array[0]
   }
 
