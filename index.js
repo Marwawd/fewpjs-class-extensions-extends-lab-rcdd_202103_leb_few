@@ -7,12 +7,6 @@ class Polygon{
       return this.array.length;
     }
     get perimeter(){
-      // let sum=0;
-      // for(let i=0 ; i<=this.countsides;i++)
-      // {
-      // sum +=this.array[i]
-      // }
-      // return sum;
       const reducer = (accumulator, currentValue) => accumulator + currentValue;
       return this.array.reduce(reducer, 0);
 
@@ -20,6 +14,14 @@ class Polygon{
 }
 class Triangle extends Polygon {
   // inherits constructor
+  get isValid(){
+  if(this.countSides===3){
+    if(this.array[0]+this.array[1]>this.array[2]) return true;
+    else if(this.array[0]+this.array[2]>this.array[1]) return true;
+    else if(this.array[1]+this.array[2]>this.array[0]) return true;
+    else return false ;
+  }
+  }
 }
 
 class Square extends Polygon {
