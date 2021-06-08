@@ -11,7 +11,7 @@ class Polygon{
       let countsides=this.countSides;
       for(let i=0 ; i<=countsides;i++)
       {
-      sum +=countsides[i]
+      sum +=this.array[i]
       }
       return sum;
 
